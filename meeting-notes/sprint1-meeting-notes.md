@@ -94,9 +94,9 @@ The brief says the module team has to agree the functionalities before we start 
 
 Action | Owner | Due |
 |---|---|---|
-| Confirm the two functionalities with the tutor | Ei | Before Sprint 2 (2 Nov) |
-| Draw the enterprise-level strategic BPMN and fix the Camunda warnings | Aye | Before Sprint 2 (2 Nov) |
-| Rename the BPMN file in the repo (currently "New BPMN diagram.bpmn") | Aye | Before Sprint 2 (2 Nov) |
+| Confirm the two functionalities with the tutor | Aye | Before Sprint 2 (2 Nov) |
+| Draw the enterprise-level strategic BPMN and fix the Camunda warnings | Ei | Before Sprint 2 (2 Nov) |
+| Rename the BPMN file in the repo (currently "New BPMN diagram.bpmn") | Ei | Before Sprint 2 (2 Nov) |
 | Commit own Sprint 1 work from own GitHub account with a clear message | Everyone | Before Sprint 1 review |
 | Upload these notes | Bertun | Same day |
 | Add the module team to the private repo, or ask how they want access | Ei | Before Sprint 2 (2 Nov) |
