@@ -1,0 +1,57 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.6.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "aa92d9c"
+  },
+  "schemaVersion": 16,
+  "id": "stock-update-form",
+  "components": [
+    {
+      "type": "text",
+      "id": "Text_title",
+      "text": "### Update stock and availability"
+    },
+    {
+      "type": "textfield",
+      "id": "Field_productName",
+      "key": "productName",
+      "label": "Product",
+      "readonly": true
+    },
+    {
+      "type": "number",
+      "id": "Field_quantity",
+      "key": "quantity",
+      "label": "New quantity",
+      "decimalDigits": 0,
+      "validate": {
+        "required": true,
+        "min": 0
+      },
+      "description": "Setting 0 makes the product unavailable"
+    },
+    {
+      "type": "datetime",
+      "id": "Field_availableFrom",
+      "key": "availableFrom",
+      "subtype": "date",
+      "dateLabel": "Available from",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "datetime",
+      "id": "Field_availableUntil",
+      "key": "availableUntil",
+      "subtype": "date",
+      "dateLabel": "Available until",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default"
+}

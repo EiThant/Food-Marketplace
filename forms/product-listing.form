@@ -1,0 +1,290 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.6.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "aa92d9c"
+  },
+  "schemaVersion": 19,
+  "id": "product-listing-form",
+  "components": [
+    {
+      "text": "### Add a new product\nFields marked * are required.",
+      "type": "text",
+      "id": "Text_title",
+      "layout": {
+        "row": "Row_17bq36l"
+      }
+    },
+    {
+      "text": "**Please correct:** {{validationMessage}}",
+      "type": "text",
+      "id": "Text_correction",
+      "conditional": {
+        "hide": "=validationMessage = null"
+      },
+      "layout": {
+        "row": "Row_1baxb0y"
+      }
+    },
+    {
+      "label": "Product details",
+      "components": [
+        {
+          "label": "Product name",
+          "type": "textfield",
+          "id": "Field_productName",
+          "key": "productName",
+          "validate": {
+            "required": true,
+            "maxLength": 100
+          },
+          "layout": {
+            "row": "Row_10rg82u"
+          }
+        },
+        {
+          "label": "Description",
+          "type": "textarea",
+          "id": "Field_description",
+          "key": "description",
+          "validate": {
+            "required": true
+          },
+          "layout": {
+            "row": "Row_0djn05i"
+          }
+        },
+        {
+          "label": "Category",
+          "values": [
+            {
+              "label": "Vegetables",
+              "value": "vegetables"
+            },
+            {
+              "label": "Dairy products",
+              "value": "dairy-products"
+            },
+            {
+              "label": "Bakery goods",
+              "value": "bakery-goods"
+            },
+            {
+              "label": "Preserves",
+              "value": "preserves"
+            },
+            {
+              "label": "Seasonal specialities",
+              "value": "seasonal-specialities"
+            }
+          ],
+          "type": "select",
+          "id": "Field_category",
+          "key": "category",
+          "validate": {
+            "required": true
+          },
+          "layout": {
+            "row": "Row_0n5ubr2"
+          }
+        },
+        {
+          "label": "Price (£ per unit)",
+          "type": "number",
+          "id": "Field_price",
+          "key": "price",
+          "decimalDigits": 2,
+          "validate": {
+            "required": true,
+            "min": 0.01
+          },
+          "layout": {
+            "row": "Row_1owrqg2"
+          }
+        },
+        {
+          "label": "Unit",
+          "values": [
+            {
+              "label": "kg",
+              "value": "kg"
+            },
+            {
+              "label": "each",
+              "value": "each"
+            },
+            {
+              "label": "dozen",
+              "value": "dozen"
+            },
+            {
+              "label": "bunch",
+              "value": "bunch"
+            },
+            {
+              "label": "jar",
+              "value": "jar"
+            }
+          ],
+          "type": "select",
+          "layout": {
+            "row": "Row_0dxv404",
+            "columns": null
+          },
+          "id": "Field_13q9ibd",
+          "key": "unit",
+          "validate": {
+            "required": true
+          }
+        },
+        {
+          "label": "Available quantity",
+          "type": "number",
+          "id": "Field_quantity",
+          "key": "quantity",
+          "decimalDigits": 0,
+          "validate": {
+            "required": true,
+            "min": 0
+          },
+          "layout": {
+            "row": "Row_0jf4kow"
+          }
+        },
+        {
+          "label": "Farm origin",
+          "type": "textfield",
+          "id": "Field_farmOrigin",
+          "key": "farmOrigin",
+          "validate": {
+            "required": true
+          },
+          "layout": {
+            "row": "Row_1qbvijk"
+          }
+        }
+      ],
+      "showOutline": true,
+      "type": "group",
+      "id": "Group_details",
+      "layout": {
+        "row": "Row_16qxc80"
+      }
+    },
+    {
+      "label": "Availability",
+      "components": [
+        {
+          "subtype": "date",
+          "type": "datetime",
+          "id": "Field_availableFrom",
+          "key": "availableFrom",
+          "dateLabel": "Available from",
+          "validate": {
+            "required": true
+          },
+          "layout": {
+            "row": "Row_1ap547r"
+          }
+        },
+        {
+          "subtype": "date",
+          "type": "datetime",
+          "id": "Field_availableUntil",
+          "key": "availableUntil",
+          "dateLabel": "Available until",
+          "validate": {
+            "required": true
+          },
+          "layout": {
+            "row": "Row_119vtd4"
+          }
+        }
+      ],
+      "showOutline": true,
+      "type": "group",
+      "id": "Group_availability",
+      "layout": {
+        "row": "Row_0bwbx6u"
+      }
+    },
+    {
+      "label": "Food safety",
+      "components": [
+        {
+          "subtype": "date",
+          "type": "datetime",
+          "id": "Field_harvestDate",
+          "key": "harvestDate",
+          "dateLabel": "Harvest date",
+          "layout": {
+            "row": "Row_1f9g8zh"
+          }
+        },
+        {
+          "subtype": "date",
+          "type": "datetime",
+          "id": "Field_bestBeforeDate",
+          "key": "bestBeforeDate",
+          "dateLabel": "Best-before date",
+          "layout": {
+            "row": "Row_0ezrjkf"
+          }
+        },
+        {
+          "label": "Allergen details",
+          "type": "textarea",
+          "id": "Field_allergens",
+          "key": "allergens",
+          "description": "Leave blank if none",
+          "layout": {
+            "row": "Row_039yy6j"
+          }
+        }
+      ],
+      "showOutline": true,
+      "type": "group",
+      "id": "Group_safety",
+      "layout": {
+        "row": "Row_1l14cce"
+      }
+    },
+    {
+      "label": "Organic certification",
+      "components": [
+        {
+          "label": "This product is organic",
+          "type": "checkbox",
+          "id": "Field_isOrganic",
+          "key": "isOrganic",
+          "layout": {
+            "row": "Row_15ntsl8"
+          }
+        },
+        {
+          "label": "Certification number",
+          "type": "textfield",
+          "id": "Field_certificationNumber",
+          "key": "certificationNumber",
+          "validate": {
+            "required": true
+          },
+          "conditional": {
+            "hide": "=isOrganic != true"
+          },
+          "layout": {
+            "row": "Row_1ijirlz"
+          }
+        }
+      ],
+      "showOutline": true,
+      "type": "group",
+      "id": "Group_organic",
+      "layout": {
+        "row": "Row_0semje3"
+      }
+    }
+  ],
+  "type": "default"
+}
